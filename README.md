@@ -74,7 +74,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://kitapi-eu.voximplant.com/api/v3*
+All URIs are relative to *https://kitapi-{{region}}.voximplant.com/api/v3*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
