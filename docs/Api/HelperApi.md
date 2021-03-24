@@ -22,7 +22,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
-
 $kitApi = new VoximplantKit\VoximplantKitClient($config);
 
 
@@ -71,8 +70,11 @@ $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
 
+
+
 // Configure API key authorization: domain
 $config->setApiKey('domain', 'your_domain');
+
 
 
 $kitApi = new VoximplantKit\VoximplantKitClient($config);

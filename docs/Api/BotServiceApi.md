@@ -27,8 +27,11 @@ $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
 
+
+
 // Configure API key authorization: domain
 $config->setApiKey('domain', 'your_domain');
+
 
 
 $kitApi = new VoximplantKit\VoximplantKitClient($config);
@@ -79,7 +82,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
-
 $kitApi = new VoximplantKit\VoximplantKitClient($config);
 
 $refresh_token = "refresh_token_example"; // string | 
@@ -127,10 +129,9 @@ Send message to channel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kit-im-{{region}}.voximplant.com');
-// Configure API key authorization: jwt_token
-$config->setApiKey('X-Kit-Authorization', 'Bearer your_X-Kit-Authorization');
+// Configure JWT token authorization
+$config->setAccessToken('your_jwt_token');
 
 
 $kitApi = new VoximplantKit\VoximplantKitClient($config);

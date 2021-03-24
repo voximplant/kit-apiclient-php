@@ -473,10 +473,9 @@ class BotServiceApi
             }
         }
 
-        // this endpoint requires API key authentication
-        $apiKey = $this->client->getConfig()->getApiKeyWithPrefix('X-Kit-Authorization');
-        if ($apiKey !== null) {
-            $headers['X-Kit-Authorization'] = $apiKey;
+        // this endpoint requires Bearer token
+        if ($this->client->getConfig()->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->client->getConfig()->getAccessToken();
         }
 
         $defaultHeaders = [];

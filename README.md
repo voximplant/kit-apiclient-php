@@ -197,22 +197,18 @@ Class | Method | HTTP request | Description
 
  Authentication schemes defined for the API:
 ## access_token
-
 - **Type**: API key
 - **API key parameter name**: access_token
 - **Location**: URL query string
 
 ## domain
-
 - **Type**: API key
 - **API key parameter name**: domain
 - **Location**: URL query string
 
 ## jwt_token
-
-- **Type**: API key
-- **API key parameter name**: X-Kit-Authorization
 - **Location**: HTTP header
+- **Header key parameter name**: Authorization
 
 
 ## Author
