@@ -57,7 +57,7 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sender_type' => '\VoximplantKit\Model\MessagingEventMessageSenderType',
+        'sender_data' => '\VoximplantKit\Model\MessagingEventMessageSenderDataType',
         'message' => '\VoximplantKit\Model\MessagingEventMessageType'
     ];
 
@@ -67,7 +67,7 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'sender_type' => null,
+        'sender_data' => null,
         'message' => null
     ];
 
@@ -98,7 +98,7 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
      * @var string[]
      */
     protected static $attributeMap = [
-        'sender_type' => 'sender_type',
+        'sender_data' => 'sender_data',
         'message' => 'message'
     ];
 
@@ -108,7 +108,7 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
      * @var string[]
      */
     protected static $setters = [
-        'sender_type' => 'setSenderType',
+        'sender_data' => 'setSenderData',
         'message' => 'setMessage'
     ];
 
@@ -118,7 +118,7 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
      * @var string[]
      */
     protected static $getters = [
-        'sender_type' => 'getSenderType',
+        'sender_data' => 'getSenderData',
         'message' => 'getMessage'
     ];
 
@@ -182,7 +182,7 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
      */
     public function __construct(array $data = null)
     {
-        $this->container['sender_type'] = isset($data['sender_type']) ? $data['sender_type'] : null;
+        $this->container['sender_data'] = isset($data['sender_data']) ? $data['sender_data'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
@@ -211,25 +211,25 @@ class MessagingOutgoingNewMessageEventTypeEventData implements ModelInterface, A
 
 
     /**
-     * Gets sender_type
+     * Gets sender_data
      *
-     * @return \VoximplantKit\Model\MessagingEventMessageSenderType
+     * @return \VoximplantKit\Model\MessagingEventMessageSenderDataType
      */
-    public function getSenderType()
+    public function getSenderData()
     {
-        return $this->container['sender_type'];
+        return $this->container['sender_data'];
     }
 
     /**
-     * Sets sender_type
+     * Sets sender_data
      *
-     * @param \VoximplantKit\Model\MessagingEventMessageSenderType $sender_type sender_type
+     * @param \VoximplantKit\Model\MessagingEventMessageSenderDataType $sender_data sender_data
      *
      * @return $this
      */
-    public function setSenderType($sender_type)
+    public function setSenderData($sender_data)
     {
-        $this->container['sender_type'] = $sender_type;
+        $this->container['sender_data'] = $sender_data;
 
         return $this;
     }

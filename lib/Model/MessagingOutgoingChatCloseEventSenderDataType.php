@@ -1,6 +1,6 @@
 <?php
 /**
- * MessagingOutgoingChatCloseEventTypeEventData
+ * MessagingOutgoingChatCloseEventSenderDataType
  *
  * PHP version 5
  *
@@ -33,14 +33,15 @@ use \ArrayAccess;
 use VoximplantKit\ObjectSerializer;
 
 /**
- * MessagingOutgoingChatCloseEventTypeEventData Class Doc Comment
+ * MessagingOutgoingChatCloseEventSenderDataType Class Doc Comment
  *
  * @category Class
+ * @description Only for where close_reason is CLOSED_BY_AGENT or CLOSED_BY_BOT
  * @package  VoximplantKit
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, ArrayAccess
+class MessagingOutgoingChatCloseEventSenderDataType implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
       *
       * @var string
       */
-    protected static $swaggerModelName = 'MessagingOutgoingChatCloseEventType_event_data';
+    protected static $swaggerModelName = 'MessagingOutgoingChatCloseEventSenderDataType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +58,12 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'close_reason' => 'string',
-        'sender_data' => '\VoximplantKit\Model\MessagingOutgoingChatCloseEventSenderDataType'
+        'sender_id' => 'int',
+        'sender_username' => 'string',
+        'sender_display_name' => 'string',
+        'sender_avatar' => 'string',
+        'sender_email' => 'string',
+        'is_bot' => 'bool'
     ];
 
     /**
@@ -67,8 +72,12 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'close_reason' => null,
-        'sender_data' => null
+        'sender_id' => null,
+        'sender_username' => null,
+        'sender_display_name' => null,
+        'sender_avatar' => null,
+        'sender_email' => null,
+        'is_bot' => null
     ];
 
     /**
@@ -98,8 +107,12 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
      * @var string[]
      */
     protected static $attributeMap = [
-        'close_reason' => 'close_reason',
-        'sender_data' => 'sender_data'
+        'sender_id' => 'sender_id',
+        'sender_username' => 'sender_username',
+        'sender_display_name' => 'sender_display_name',
+        'sender_avatar' => 'sender_avatar',
+        'sender_email' => 'sender_email',
+        'is_bot' => 'is_bot'
     ];
 
     /**
@@ -108,8 +121,12 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
      * @var string[]
      */
     protected static $setters = [
-        'close_reason' => 'setCloseReason',
-        'sender_data' => 'setSenderData'
+        'sender_id' => 'setSenderId',
+        'sender_username' => 'setSenderUsername',
+        'sender_display_name' => 'setSenderDisplayName',
+        'sender_avatar' => 'setSenderAvatar',
+        'sender_email' => 'setSenderEmail',
+        'is_bot' => 'setIsBot'
     ];
 
     /**
@@ -118,8 +135,12 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
      * @var string[]
      */
     protected static $getters = [
-        'close_reason' => 'getCloseReason',
-        'sender_data' => 'getSenderData'
+        'sender_id' => 'getSenderId',
+        'sender_username' => 'getSenderUsername',
+        'sender_display_name' => 'getSenderDisplayName',
+        'sender_avatar' => 'getSenderAvatar',
+        'sender_email' => 'getSenderEmail',
+        'is_bot' => 'getIsBot'
     ];
 
     /**
@@ -163,27 +184,8 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
         return self::$swaggerModelName;
     }
 
-    const CLOSE_REASON_AGENT = 'CLOSED_BY_AGENT';
-    const CLOSE_REASON_BOT = 'CLOSED_BY_BOT';
-    const CLOSE_REASON_CLIENT_TIMEOUT = 'CLOSED_BY_CLIENT_TIMEOUT';
-    const CLOSE_REASON_UNKNOWN_REASON = 'CLOSED_BY_UNKNOWN_REASON';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCloseReasonAllowableValues()
-    {
-        return [
-            self::CLOSE_REASON_AGENT,
-            self::CLOSE_REASON_BOT,
-            self::CLOSE_REASON_CLIENT_TIMEOUT,
-            self::CLOSE_REASON_UNKNOWN_REASON
-        ];
-    }
     
 
     /**
@@ -201,8 +203,12 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
      */
     public function __construct(array $data = null)
     {
-        $this->container['close_reason'] = isset($data['close_reason']) ? $data['close_reason'] : null;
-        $this->container['sender_data'] = isset($data['sender_data']) ? $data['sender_data'] : null;
+        $this->container['sender_id'] = isset($data['sender_id']) ? $data['sender_id'] : null;
+        $this->container['sender_username'] = isset($data['sender_username']) ? $data['sender_username'] : null;
+        $this->container['sender_display_name'] = isset($data['sender_display_name']) ? $data['sender_display_name'] : null;
+        $this->container['sender_avatar'] = isset($data['sender_avatar']) ? $data['sender_avatar'] : null;
+        $this->container['sender_email'] = isset($data['sender_email']) ? $data['sender_email'] : null;
+        $this->container['is_bot'] = isset($data['is_bot']) ? $data['is_bot'] : null;
     }
 
     /**
@@ -213,17 +219,6 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['close_reason'] === null) {
-            $invalidProperties[] = "'close_reason' can't be null";
-        }
-        $allowedValues = $this->getCloseReasonAllowableValues();
-        if (!is_null($this->container['close_reason']) && !in_array($this->container['close_reason'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'close_reason', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -241,58 +236,145 @@ class MessagingOutgoingChatCloseEventTypeEventData implements ModelInterface, Ar
 
 
     /**
-     * Gets close_reason
+     * Gets sender_id
      *
-     * @return string
+     * @return int
      */
-    public function getCloseReason()
+    public function getSenderId()
     {
-        return $this->container['close_reason'];
+        return $this->container['sender_id'];
     }
 
     /**
-     * Sets close_reason
+     * Sets sender_id
      *
-     * @param string $close_reason Allowed only CLOSED_BY_AGENT, CLOSED_BY_BOT, CLOSED_BY_CLIENT_TIMEOUT, CLOSED_BY_UNKNOWN_REASON
+     * @param int $sender_id Only for CLOSED_BY_AGENT
      *
      * @return $this
      */
-    public function setCloseReason($close_reason)
+    public function setSenderId($sender_id)
     {
-        $allowedValues = $this->getCloseReasonAllowableValues();
-        if (!in_array($close_reason, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'close_reason', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['close_reason'] = $close_reason;
+        $this->container['sender_id'] = $sender_id;
 
         return $this;
     }
 
     /**
-     * Gets sender_data
+     * Gets sender_username
      *
-     * @return \VoximplantKit\Model\MessagingOutgoingChatCloseEventSenderDataType
+     * @return string
      */
-    public function getSenderData()
+    public function getSenderUsername()
     {
-        return $this->container['sender_data'];
+        return $this->container['sender_username'];
     }
 
     /**
-     * Sets sender_data
+     * Sets sender_username
      *
-     * @param \VoximplantKit\Model\MessagingOutgoingChatCloseEventSenderDataType $sender_data sender_data
+     * @param string $sender_username Only for CLOSED_BY_AGENT
      *
      * @return $this
      */
-    public function setSenderData($sender_data)
+    public function setSenderUsername($sender_username)
     {
-        $this->container['sender_data'] = $sender_data;
+        $this->container['sender_username'] = $sender_username;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_display_name
+     *
+     * @return string
+     */
+    public function getSenderDisplayName()
+    {
+        return $this->container['sender_display_name'];
+    }
+
+    /**
+     * Sets sender_display_name
+     *
+     * @param string $sender_display_name Only for CLOSED_BY_AGENT
+     *
+     * @return $this
+     */
+    public function setSenderDisplayName($sender_display_name)
+    {
+        $this->container['sender_display_name'] = $sender_display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_avatar
+     *
+     * @return string
+     */
+    public function getSenderAvatar()
+    {
+        return $this->container['sender_avatar'];
+    }
+
+    /**
+     * Sets sender_avatar
+     *
+     * @param string $sender_avatar Only for CLOSED_BY_AGENT
+     *
+     * @return $this
+     */
+    public function setSenderAvatar($sender_avatar)
+    {
+        $this->container['sender_avatar'] = $sender_avatar;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_email
+     *
+     * @return string
+     */
+    public function getSenderEmail()
+    {
+        return $this->container['sender_email'];
+    }
+
+    /**
+     * Sets sender_email
+     *
+     * @param string $sender_email Only for CLOSED_BY_AGENT
+     *
+     * @return $this
+     */
+    public function setSenderEmail($sender_email)
+    {
+        $this->container['sender_email'] = $sender_email;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_bot
+     *
+     * @return bool
+     */
+    public function getIsBot()
+    {
+        return $this->container['is_bot'];
+    }
+
+    /**
+     * Sets is_bot
+     *
+     * @param bool $is_bot is_bot
+     *
+     * @return $this
+     */
+    public function setIsBot($is_bot)
+    {
+        $this->container['is_bot'] = $is_bot;
 
         return $this;
     }
