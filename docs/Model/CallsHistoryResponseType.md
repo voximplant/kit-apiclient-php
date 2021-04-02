@@ -1,9 +1,11 @@
-# Body3
+# CallsHistoryResponseType
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**report_id** | **int** | Report ID. The ID can be retrieved via the **exportCallsHistoryReport** methods | [optional] 
+**success** | **bool** |  | [optional] 
+**result** | [**\VoximplantKit\Model\CallsHistoryType[]**](CallsHistoryType.md) |  | [optional] 
+**_meta** | [**\VoximplantKit\Model\Meta**](Meta.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

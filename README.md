@@ -100,8 +100,12 @@ Class | Method | HTTP request | Description
 *CampaignsApi* | [**stat**](docs/Api/CampaignsApi.md#stat) | **POST** /outbound/stat | 
 *HelperApi* | [**getListTimezones**](docs/Api/HelperApi.md#getlisttimezones) | **GET** /helper/getListTimezones | 
 *HelperApi* | [**getTimezonesByNumber**](docs/Api/HelperApi.md#gettimezonesbynumber) | **POST** /helper/getTimezonesByNumber | 
+*HistoryApi* | [**exportCallsHistoryReport**](docs/Api/HistoryApi.md#exportcallshistoryreport) | **POST** /history/exportCallsHistoryReport | 
+*HistoryApi* | [**searchCalls**](docs/Api/HistoryApi.md#searchcalls) | **GET** /history/searchCalls | 
 *NumbersApi* | [**searchCallerIDs**](docs/Api/NumbersApi.md#searchcallerids) | **GET** /callerid/searchCallerIDs | 
 *NumbersApi* | [**searchNumbers**](docs/Api/NumbersApi.md#searchnumbers) | **GET** /phone/searchNumbers | 
+*ReportApi* | [**downloadReport**](docs/Api/ReportApi.md#downloadreport) | **POST** /report/downloadReport | 
+*ReportApi* | [**getReportStatus**](docs/Api/ReportApi.md#getreportstatus) | **POST** /report/getReportStatus | 
 *ScenariosApi* | [**getScenarioVariables**](docs/Api/ScenariosApi.md#getscenariovariables) | **POST** /scenario/getScenarioVariables | 
 *ScenariosApi* | [**runScenario**](docs/Api/ScenariosApi.md#runscenario) | **POST** /scenario/runScenario | 
 *ScenariosApi* | [**searchScenarios**](docs/Api/ScenariosApi.md#searchscenarios) | **GET** /scenario/searchScenarios | 
@@ -125,7 +129,12 @@ Class | Method | HTTP request | Description
  - [Body1](docs/Model/Body1.md)
  - [Body2](docs/Model/Body2.md)
  - [Body3](docs/Model/Body3.md)
+ - [Body4](docs/Model/Body4.md)
+ - [Body5](docs/Model/Body5.md)
+ - [Body6](docs/Model/Body6.md)
  - [CallerIDType](docs/Model/CallerIDType.md)
+ - [CallsHistoryResponseType](docs/Model/CallsHistoryResponseType.md)
+ - [CallsHistoryType](docs/Model/CallsHistoryType.md)
  - [CallsType](docs/Model/CallsType.md)
  - [CampaignStatResponseType](docs/Model/CampaignStatResponseType.md)
  - [CampaignStatType](docs/Model/CampaignStatType.md)

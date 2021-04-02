@@ -57,7 +57,12 @@ class Body2 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'channel_uuid' => 'string'
+        'datetime_start' => 'string',
+        'datetime_end' => 'string',
+        'call_direction' => 'string',
+        'scenario_ids' => 'string',
+        'campaign_ids' => 'string',
+        'phone' => 'string'
     ];
 
     /**
@@ -66,7 +71,12 @@ class Body2 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'channel_uuid' => null
+        'datetime_start' => null,
+        'datetime_end' => null,
+        'call_direction' => null,
+        'scenario_ids' => null,
+        'campaign_ids' => null,
+        'phone' => null
     ];
 
     /**
@@ -96,7 +106,12 @@ class Body2 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'channel_uuid' => 'channel_uuid'
+        'datetime_start' => 'datetime_start',
+        'datetime_end' => 'datetime_end',
+        'call_direction' => 'call_direction',
+        'scenario_ids' => 'scenario_ids',
+        'campaign_ids' => 'campaign_ids',
+        'phone' => 'phone'
     ];
 
     /**
@@ -105,7 +120,12 @@ class Body2 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'channel_uuid' => 'setChannelUuid'
+        'datetime_start' => 'setDatetimeStart',
+        'datetime_end' => 'setDatetimeEnd',
+        'call_direction' => 'setCallDirection',
+        'scenario_ids' => 'setScenarioIds',
+        'campaign_ids' => 'setCampaignIds',
+        'phone' => 'setPhone'
     ];
 
     /**
@@ -114,7 +134,12 @@ class Body2 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'channel_uuid' => 'getChannelUuid'
+        'datetime_start' => 'getDatetimeStart',
+        'datetime_end' => 'getDatetimeEnd',
+        'call_direction' => 'getCallDirection',
+        'scenario_ids' => 'getScenarioIds',
+        'campaign_ids' => 'getCampaignIds',
+        'phone' => 'getPhone'
     ];
 
     /**
@@ -177,7 +202,12 @@ class Body2 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['channel_uuid'] = isset($data['channel_uuid']) ? $data['channel_uuid'] : null;
+        $this->container['datetime_start'] = isset($data['datetime_start']) ? $data['datetime_start'] : null;
+        $this->container['datetime_end'] = isset($data['datetime_end']) ? $data['datetime_end'] : null;
+        $this->container['call_direction'] = isset($data['call_direction']) ? $data['call_direction'] : null;
+        $this->container['scenario_ids'] = isset($data['scenario_ids']) ? $data['scenario_ids'] : null;
+        $this->container['campaign_ids'] = isset($data['campaign_ids']) ? $data['campaign_ids'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
     }
 
     /**
@@ -189,9 +219,6 @@ class Body2 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['channel_uuid'] === null) {
-            $invalidProperties[] = "'channel_uuid' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -208,25 +235,145 @@ class Body2 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets channel_uuid
+     * Gets datetime_start
      *
      * @return string
      */
-    public function getChannelUuid()
+    public function getDatetimeStart()
     {
-        return $this->container['channel_uuid'];
+        return $this->container['datetime_start'];
     }
 
     /**
-     * Sets channel_uuid
+     * Sets datetime_start
      *
-     * @param string $channel_uuid Your custom channel uuid
+     * @param string $datetime_start Start date. The format is 24-h ‘YYYY-MM-DD HH:mm:ss’ in UTC
      *
      * @return $this
      */
-    public function setChannelUuid($channel_uuid)
+    public function setDatetimeStart($datetime_start)
     {
-        $this->container['channel_uuid'] = $channel_uuid;
+        $this->container['datetime_start'] = $datetime_start;
+
+        return $this;
+    }
+
+    /**
+     * Gets datetime_end
+     *
+     * @return string
+     */
+    public function getDatetimeEnd()
+    {
+        return $this->container['datetime_end'];
+    }
+
+    /**
+     * Sets datetime_end
+     *
+     * @param string $datetime_end End date. The format is 24-h ‘YYYY-MM-DD HH:mm:ss’ in UTC
+     *
+     * @return $this
+     */
+    public function setDatetimeEnd($datetime_end)
+    {
+        $this->container['datetime_end'] = $datetime_end;
+
+        return $this;
+    }
+
+    /**
+     * Gets call_direction
+     *
+     * @return string
+     */
+    public function getCallDirection()
+    {
+        return $this->container['call_direction'];
+    }
+
+    /**
+     * Sets call_direction
+     *
+     * @param string $call_direction Call direction (<b>example:</b> ‘call_direction=outgoing’ or ‘call_direction=incoming’ or ‘call_direction=all’)
+     *
+     * @return $this
+     */
+    public function setCallDirection($call_direction)
+    {
+        $this->container['call_direction'] = $call_direction;
+
+        return $this;
+    }
+
+    /**
+     * Gets scenario_ids
+     *
+     * @return string
+     */
+    public function getScenarioIds()
+    {
+        return $this->container['scenario_ids'];
+    }
+
+    /**
+     * Sets scenario_ids
+     *
+     * @param string $scenario_ids Json integer array with scenarios IDs. The ID can be retrieved via the **searchScenarios** method. (<b>example:</b> scenario_ids=[1,2,3,...,9])
+     *
+     * @return $this
+     */
+    public function setScenarioIds($scenario_ids)
+    {
+        $this->container['scenario_ids'] = $scenario_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets campaign_ids
+     *
+     * @return string
+     */
+    public function getCampaignIds()
+    {
+        return $this->container['campaign_ids'];
+    }
+
+    /**
+     * Sets campaign_ids
+     *
+     * @param string $campaign_ids Json integer array with campaign IDs. The ID can be retrieved via the **searchCampaigns** method. (<b>example:</b> campaign_ids=[1,2,3,...,9])
+     *
+     * @return $this
+     */
+    public function setCampaignIds($campaign_ids)
+    {
+        $this->container['campaign_ids'] = $campaign_ids;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+     * Sets phone
+     *
+     * @param string $phone Phone number to filter. The response will include calls to the specified number only. The minimum number of digits is 3. (<b>example:</b> phone=15417543010)
+     *
+     * @return $this
+     */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
 
         return $this;
     }

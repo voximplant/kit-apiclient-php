@@ -1,6 +1,6 @@
 <?php
 /**
- * Body3
+ * Body5
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use VoximplantKit\ObjectSerializer;
 
 /**
- * Body3 Class Doc Comment
+ * Body5 Class Doc Comment
  *
  * @category Class
  * @package  VoximplantKit
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Body3 implements ModelInterface, ArrayAccess
+class Body5 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Body3 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'body_3';
+    protected static $swaggerModelName = 'body_5';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class Body3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'report_id' => 'int'
+        'channel_uuid' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class Body3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'report_id' => null
+        'channel_uuid' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'report_id' => 'report_id'
+        'channel_uuid' => 'channel_uuid'
     ];
 
     /**
@@ -105,7 +105,7 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'report_id' => 'setReportId'
+        'channel_uuid' => 'setChannelUuid'
     ];
 
     /**
@@ -114,7 +114,7 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'report_id' => 'getReportId'
+        'channel_uuid' => 'getChannelUuid'
     ];
 
     /**
@@ -177,7 +177,7 @@ class Body3 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['report_id'] = isset($data['report_id']) ? $data['report_id'] : null;
+        $this->container['channel_uuid'] = isset($data['channel_uuid']) ? $data['channel_uuid'] : null;
     }
 
     /**
@@ -189,6 +189,9 @@ class Body3 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['channel_uuid'] === null) {
+            $invalidProperties[] = "'channel_uuid' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -205,25 +208,25 @@ class Body3 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets report_id
+     * Gets channel_uuid
      *
-     * @return int
+     * @return string
      */
-    public function getReportId()
+    public function getChannelUuid()
     {
-        return $this->container['report_id'];
+        return $this->container['channel_uuid'];
     }
 
     /**
-     * Sets report_id
+     * Sets channel_uuid
      *
-     * @param int $report_id Report ID. The ID can be retrieved via the **exportCallsHistoryReport** methods
+     * @param string $channel_uuid Your custom channel uuid
      *
      * @return $this
      */
-    public function setReportId($report_id)
+    public function setChannelUuid($channel_uuid)
     {
-        $this->container['report_id'] = $report_id;
+        $this->container['channel_uuid'] = $channel_uuid;
 
         return $this;
     }

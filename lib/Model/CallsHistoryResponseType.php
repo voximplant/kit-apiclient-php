@@ -1,6 +1,6 @@
 <?php
 /**
- * Body3
+ * CallsHistoryResponseType
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use VoximplantKit\ObjectSerializer;
 
 /**
- * Body3 Class Doc Comment
+ * CallsHistoryResponseType Class Doc Comment
  *
  * @category Class
  * @package  VoximplantKit
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Body3 implements ModelInterface, ArrayAccess
+class CallsHistoryResponseType implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Body3 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'body_3';
+    protected static $swaggerModelName = 'CallsHistoryResponseType';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,9 @@ class Body3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'report_id' => 'int'
+        'success' => 'bool',
+        'result' => '\VoximplantKit\Model\CallsHistoryType[]',
+        '_meta' => '\VoximplantKit\Model\Meta'
     ];
 
     /**
@@ -66,7 +68,9 @@ class Body3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'report_id' => null
+        'success' => null,
+        'result' => null,
+        '_meta' => null
     ];
 
     /**
@@ -96,7 +100,9 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'report_id' => 'report_id'
+        'success' => 'success',
+        'result' => 'result',
+        '_meta' => '_meta'
     ];
 
     /**
@@ -105,7 +111,9 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'report_id' => 'setReportId'
+        'success' => 'setSuccess',
+        'result' => 'setResult',
+        '_meta' => 'setMeta'
     ];
 
     /**
@@ -114,7 +122,9 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'report_id' => 'getReportId'
+        'success' => 'getSuccess',
+        'result' => 'getResult',
+        '_meta' => 'getMeta'
     ];
 
     /**
@@ -177,7 +187,9 @@ class Body3 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['report_id'] = isset($data['report_id']) ? $data['report_id'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
+        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['_meta'] = isset($data['_meta']) ? $data['_meta'] : null;
     }
 
     /**
@@ -205,25 +217,73 @@ class Body3 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets report_id
+     * Gets success
      *
-     * @return int
+     * @return bool
      */
-    public function getReportId()
+    public function getSuccess()
     {
-        return $this->container['report_id'];
+        return $this->container['success'];
     }
 
     /**
-     * Sets report_id
+     * Sets success
      *
-     * @param int $report_id Report ID. The ID can be retrieved via the **exportCallsHistoryReport** methods
+     * @param bool $success success
      *
      * @return $this
      */
-    public function setReportId($report_id)
+    public function setSuccess($success)
     {
-        $this->container['report_id'] = $report_id;
+        $this->container['success'] = $success;
+
+        return $this;
+    }
+
+    /**
+     * Gets result
+     *
+     * @return \VoximplantKit\Model\CallsHistoryType[]
+     */
+    public function getResult()
+    {
+        return $this->container['result'];
+    }
+
+    /**
+     * Sets result
+     *
+     * @param \VoximplantKit\Model\CallsHistoryType[] $result result
+     *
+     * @return $this
+     */
+    public function setResult($result)
+    {
+        $this->container['result'] = $result;
+
+        return $this;
+    }
+
+    /**
+     * Gets _meta
+     *
+     * @return \VoximplantKit\Model\Meta
+     */
+    public function getMeta()
+    {
+        return $this->container['_meta'];
+    }
+
+    /**
+     * Sets _meta
+     *
+     * @param \VoximplantKit\Model\Meta $_meta _meta
+     *
+     * @return $this
+     */
+    public function setMeta($_meta)
+    {
+        $this->container['_meta'] = $_meta;
 
         return $this;
     }

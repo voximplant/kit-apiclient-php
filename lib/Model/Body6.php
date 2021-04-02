@@ -1,6 +1,6 @@
 <?php
 /**
- * Body3
+ * Body6
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use VoximplantKit\ObjectSerializer;
 
 /**
- * Body3 Class Doc Comment
+ * Body6 Class Doc Comment
  *
  * @category Class
  * @package  VoximplantKit
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Body3 implements ModelInterface, ArrayAccess
+class Body6 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Body3 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'body_3';
+    protected static $swaggerModelName = 'body_6';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class Body3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'report_id' => 'int'
+        'refresh_token' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class Body3 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'report_id' => null
+        'refresh_token' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'report_id' => 'report_id'
+        'refresh_token' => 'refresh_token'
     ];
 
     /**
@@ -105,7 +105,7 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'report_id' => 'setReportId'
+        'refresh_token' => 'setRefreshToken'
     ];
 
     /**
@@ -114,7 +114,7 @@ class Body3 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'report_id' => 'getReportId'
+        'refresh_token' => 'getRefreshToken'
     ];
 
     /**
@@ -177,7 +177,7 @@ class Body3 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['report_id'] = isset($data['report_id']) ? $data['report_id'] : null;
+        $this->container['refresh_token'] = isset($data['refresh_token']) ? $data['refresh_token'] : null;
     }
 
     /**
@@ -189,6 +189,9 @@ class Body3 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['refresh_token'] === null) {
+            $invalidProperties[] = "'refresh_token' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -205,25 +208,25 @@ class Body3 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets report_id
+     * Gets refresh_token
      *
-     * @return int
+     * @return string
      */
-    public function getReportId()
+    public function getRefreshToken()
     {
-        return $this->container['report_id'];
+        return $this->container['refresh_token'];
     }
 
     /**
-     * Sets report_id
+     * Sets refresh_token
      *
-     * @param int $report_id Report ID. The ID can be retrieved via the **exportCallsHistoryReport** methods
+     * @param string $refresh_token Your refresh token.
      *
      * @return $this
      */
-    public function setReportId($report_id)
+    public function setRefreshToken($refresh_token)
     {
-        $this->container['report_id'] = $report_id;
+        $this->container['refresh_token'] = $refresh_token;
 
         return $this;
     }

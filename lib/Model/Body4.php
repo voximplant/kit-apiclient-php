@@ -1,6 +1,6 @@
 <?php
 /**
- * Body3
+ * Body4
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use VoximplantKit\ObjectSerializer;
 
 /**
- * Body3 Class Doc Comment
+ * Body4 Class Doc Comment
  *
  * @category Class
  * @package  VoximplantKit
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Body3 implements ModelInterface, ArrayAccess
+class Body4 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class Body3 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'body_3';
+    protected static $swaggerModelName = 'body_4';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
