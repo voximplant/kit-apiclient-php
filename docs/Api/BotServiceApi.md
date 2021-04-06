@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**login**](BotServiceApi.md#login) | **POST** /botService/login | 
 [**refreshToken**](BotServiceApi.md#refreshToken) | **POST** /botService/refreshToken | 
-[**sendMessage**](BotServiceApi.md#sendMessage) | **POST** /{channel_uuid} | 
+[**sendEvent**](BotServiceApi.md#sendEvent) | **POST** /botService/callback/{channel_uuid} | 
 
 
 # **login**
@@ -22,11 +22,10 @@ Generating jwt token.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -82,6 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 $kitApi = new VoximplantKit\VoximplantKitClient($config);
 
 $refresh_token = "refresh_token_example"; // string | 
@@ -116,12 +116,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **sendMessage**
-> \VoximplantKit\Model\InlineResponse200 sendMessage($body, $channel_uuid)
+# **sendEvent**
+> \VoximplantKit\Model\InlineResponse200 sendEvent($body, $channel_uuid)
 
 
 
-Send message to channel
+Send event to channel
 
 ### Example
 ```php
@@ -129,7 +129,8 @@ Send message to channel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-$config->setHost('https://kit-im-{{region}}.voximplant.com');
+$config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure JWT token authorization
 $config->setAccessToken('your_jwt_token');
 
@@ -140,10 +141,10 @@ $body = new \VoximplantKit\Model\MessagingIncomingEventType(); // \VoximplantKit
 $channel_uuid = "channel_uuid_example"; // string | Your channel uuid. Set in query path. See an example.
 
 try {
-    $result = $kitApi->BotServiceApi->sendMessage($body, $channel_uuid);
+    $result = $kitApi->BotServiceApi->sendEvent($body, $channel_uuid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling $kitApi->BotServiceApi->sendMessage: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling $kitApi->BotServiceApi->sendEvent: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

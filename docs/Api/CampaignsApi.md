@@ -30,11 +30,10 @@ Append contacts to the existing campaign. It is possible to add a maximum of 100
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -91,11 +90,10 @@ Delete the specified campaign. The method only works for the campaigns with the 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -150,11 +148,10 @@ Get the download link to the stats file (.XSLS).
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -209,11 +206,10 @@ Start processing the stats of the specified campaign. To check if the processing
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -276,11 +272,10 @@ Get info about stats processing. If the response parameter \"processed\" is True
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -335,11 +330,10 @@ Create a new campaign for automatic calls and start campaign. Use the **appendTo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -418,11 +412,10 @@ Pause the specified campaign. You can make the campaign active again via the **r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -477,11 +470,10 @@ Resume the specified campaign which was paused via the **pauseCampaign** method.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -536,11 +528,10 @@ Search for the call attempts. The method without specifying the parameters retur
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -609,11 +600,10 @@ Search for the campaigns. The method without specifying the parameters returns t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -686,11 +676,10 @@ Get the statistics of the specified campaign(s). Campaign_ids is a JSON array wi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain

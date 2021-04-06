@@ -21,11 +21,10 @@ Get the download link to the report file (.xsls).
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -80,11 +79,10 @@ Get info about report processing. If the response parameter \"processed\" is Tru
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain

@@ -82,7 +82,7 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**searchSettings**](docs/Api/AccountApi.md#searchsettings) | **GET** /setting/searchSettings | 
 *BotServiceApi* | [**login**](docs/Api/BotServiceApi.md#login) | **POST** /botService/login | 
 *BotServiceApi* | [**refreshToken**](docs/Api/BotServiceApi.md#refreshtoken) | **POST** /botService/refreshToken | 
-*BotServiceApi* | [**sendMessage**](docs/Api/BotServiceApi.md#sendmessage) | **POST** /{channel_uuid} | 
+*BotServiceApi* | [**sendEvent**](docs/Api/BotServiceApi.md#sendevent) | **POST** /botService/callback/{channel_uuid} | 
 *CallsApi* | [**downloadHistoryReport**](docs/Api/CallsApi.md#downloadhistoryreport) | **POST** /calls/downloadHistoryReport | 
 *CallsApi* | [**exportHistoryReport**](docs/Api/CallsApi.md#exporthistoryreport) | **POST** /calls/exportHistoryReport | 
 *CallsApi* | [**getHistoryReportStatus**](docs/Api/CallsApi.md#gethistoryreportstatus) | **POST** /calls/getHistoryReportStatus | 

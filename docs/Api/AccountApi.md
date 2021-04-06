@@ -21,11 +21,10 @@ Get info about your account, such as account name, currency etc.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -76,11 +75,10 @@ Get current account settings.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain

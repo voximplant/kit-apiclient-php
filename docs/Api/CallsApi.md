@@ -23,11 +23,10 @@ Get the download link to the call history file (.xsls).
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -82,11 +81,10 @@ Start processing the call history. To check if the processing is over, use the <
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -147,11 +145,10 @@ Get info about call history processing. If the response parameter \"processed\" 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain
@@ -206,11 +203,10 @@ Search for the calls. The method without specifying the parameters returns the l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $config = VoximplantKit\Configuration::getDefaultConfiguration();
-
 $config->setHost('https://kitapi-{{region}}.voximplant.com/api/v3');
+
 // Configure API key authorization: access_token
 $config->setApiKey('access_token', 'your_access_token');
-
 
 
 // Configure API key authorization: domain

@@ -342,7 +342,7 @@ class BotServiceApi
         return $request;
     }
     /**
-     * Operation sendMessage
+     * Operation sendEvent
      *
      * @param  \VoximplantKit\Model\MessagingIncomingEventType $body body (required)
      * @param  string $channel_uuid Your channel uuid. Set in query path. See an example. (required)
@@ -351,15 +351,15 @@ class BotServiceApi
      * @throws \InvalidArgumentException
      * @return \VoximplantKit\Model\InlineResponse200
      */
-    public function sendMessage($body, $channel_uuid)
+    public function sendEvent($body, $channel_uuid)
     {
-        $request = $this->sendMessageRequest($body, $channel_uuid);
+        $request = $this->sendEventRequest($body, $channel_uuid);
         list($response) = $this->client->sync($request);
         return $response;
     }
 
     /**
-     * Operation sendMessageAsync
+     * Operation sendEventAsync
      *
      * 
      *
@@ -369,9 +369,9 @@ class BotServiceApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function sendMessageAsync($body, $channel_uuid)
+    public function sendEventAsync($body, $channel_uuid)
     {
-        $request = $this->sendMessageRequest($body, $channel_uuid);
+        $request = $this->sendEventRequest($body, $channel_uuid);
         return $this->client->async($request)->then(
                function ($response) {
                	return $response[0];
@@ -380,7 +380,7 @@ class BotServiceApi
     }
 
     /**
-     * Create request for operation 'sendMessage'
+     * Create request for operation 'sendEvent'
      *
      * @param  \VoximplantKit\Model\MessagingIncomingEventType $body (required)
      * @param  string $channel_uuid Your channel uuid. Set in query path. See an example. (required)
@@ -388,22 +388,22 @@ class BotServiceApi
      * @throws \InvalidArgumentException
      * @return VoximplantKitRequest
      */
-    protected function sendMessageRequest($body, $channel_uuid)
+    protected function sendEventRequest($body, $channel_uuid)
     {
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling sendMessage'
+                'Missing the required parameter $body when calling sendEvent'
             );
         }
         // verify the required parameter 'channel_uuid' is set
         if ($channel_uuid === null || (is_array($channel_uuid) && count($channel_uuid) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $channel_uuid when calling sendMessage'
+                'Missing the required parameter $channel_uuid when calling sendEvent'
             );
         }
 
-        $resourcePath = '/{channel_uuid}';
+        $resourcePath = '/botService/callback/{channel_uuid}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
