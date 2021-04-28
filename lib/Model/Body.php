@@ -283,7 +283,7 @@ class Body implements ModelInterface, ArrayAccess
     /**
      * Sets variables
      *
-     * @param string $variables Data in JSON format to be used in the scenario. {\"custom_field_1\": \"custom_value_1\"}, {\"custom_field_2\": \"custom_value_2\", ...}
+     * @param string $variables Data in JSON format to be used in the scenario. {\"custom_field_1\": \"custom_value_1\", \"custom_field_2\": \"custom_value_2\", ...}
      *
      * @return $this
      */
