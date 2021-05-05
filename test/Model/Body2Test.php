@@ -77,9 +77,44 @@ class Body2Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "channel_uuid"
+     * Test attribute "datetime_start"
      */
-    public function testPropertyChannelUuid()
+    public function testPropertyDatetimeStart()
+    {
+    }
+
+    /**
+     * Test attribute "datetime_end"
+     */
+    public function testPropertyDatetimeEnd()
+    {
+    }
+
+    /**
+     * Test attribute "call_direction"
+     */
+    public function testPropertyCallDirection()
+    {
+    }
+
+    /**
+     * Test attribute "scenario_ids"
+     */
+    public function testPropertyScenarioIds()
+    {
+    }
+
+    /**
+     * Test attribute "campaign_ids"
+     */
+    public function testPropertyCampaignIds()
+    {
+    }
+
+    /**
+     * Test attribute "phone"
+     */
+    public function testPropertyPhone()
     {
     }
 }

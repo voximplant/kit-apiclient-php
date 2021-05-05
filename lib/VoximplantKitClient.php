@@ -61,11 +61,6 @@ class VoximplantKitClient
     private $history;
 
     /**
-     * @var Resources\BotServiceApi
-     */
-    private $botservice;
-
-    /**
      * @var Resources\ReportApi
      */
     private $report;
@@ -89,7 +84,6 @@ class VoximplantKitClient
         $this->helper = new Resources\HelperApi($this);
         $this->numbers = new Resources\NumbersApi($this);
         $this->scenarios = new Resources\ScenariosApi($this);
-        $this->botservice = new Resources\BotServiceApi($this);
         $this->history = new Resources\HistoryApi($this);
         $this->report = new Resources\ReportApi($this);
     }

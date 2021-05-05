@@ -80,9 +80,6 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountApi* | [**getAccountInfo**](docs/Api/AccountApi.md#getaccountinfo) | **GET** /account/getAccountInfo | 
 *AccountApi* | [**searchSettings**](docs/Api/AccountApi.md#searchsettings) | **GET** /setting/searchSettings | 
-*BotServiceApi* | [**login**](docs/Api/BotServiceApi.md#login) | **POST** /botService/login | 
-*BotServiceApi* | [**refreshToken**](docs/Api/BotServiceApi.md#refreshtoken) | **POST** /botService/refreshToken | 
-*BotServiceApi* | [**sendEvent**](docs/Api/BotServiceApi.md#sendevent) | **POST** /botService/callback/{channel_uuid} | 
 *CallsApi* | [**downloadHistoryReport**](docs/Api/CallsApi.md#downloadhistoryreport) | **POST** /calls/downloadHistoryReport | 
 *CallsApi* | [**exportHistoryReport**](docs/Api/CallsApi.md#exporthistoryreport) | **POST** /calls/exportHistoryReport | 
 *CallsApi* | [**getHistoryReportStatus**](docs/Api/CallsApi.md#gethistoryreportstatus) | **POST** /calls/getHistoryReportStatus | 
@@ -120,7 +117,6 @@ Class | Method | HTTP request | Description
  - [AccountProfileType](docs/Model/AccountProfileType.md)
  - [AccountType](docs/Model/AccountType.md)
  - [AccountUserType](docs/Model/AccountUserType.md)
- - [AnyOfMessagingEventMessageTypePayloadItems](docs/Model/AnyOfMessagingEventMessageTypePayloadItems.md)
  - [AppendFailType](docs/Model/AppendFailType.md)
  - [AppendToCampaignResponseType](docs/Model/AppendToCampaignResponseType.md)
  - [AppendToCampaignResponseTypeResult](docs/Model/AppendToCampaignResponseTypeResult.md)
@@ -130,8 +126,6 @@ Class | Method | HTTP request | Description
  - [Body2](docs/Model/Body2.md)
  - [Body3](docs/Model/Body3.md)
  - [Body4](docs/Model/Body4.md)
- - [Body5](docs/Model/Body5.md)
- - [Body6](docs/Model/Body6.md)
  - [CallerIDType](docs/Model/CallerIDType.md)
  - [CallsHistoryResponseType](docs/Model/CallsHistoryResponseType.md)
  - [CallsHistoryType](docs/Model/CallsHistoryType.md)
@@ -157,26 +151,6 @@ Class | Method | HTTP request | Description
  - [InitCampaignRequestType](docs/Model/InitCampaignRequestType.md)
  - [InitCampaignResponseType](docs/Model/InitCampaignResponseType.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
- - [MessagingEventMessagePayloadContact](docs/Model/MessagingEventMessagePayloadContact.md)
- - [MessagingEventMessagePayloadLocation](docs/Model/MessagingEventMessagePayloadLocation.md)
- - [MessagingEventMessagePayloadMedia](docs/Model/MessagingEventMessagePayloadMedia.md)
- - [MessagingEventMessageSenderDataType](docs/Model/MessagingEventMessageSenderDataType.md)
- - [MessagingEventMessageType](docs/Model/MessagingEventMessageType.md)
- - [MessagingIncomingEventClientDataDeviceType](docs/Model/MessagingIncomingEventClientDataDeviceType.md)
- - [MessagingIncomingEventClientDataLocationType](docs/Model/MessagingIncomingEventClientDataLocationType.md)
- - [MessagingIncomingEventClientDataPageType](docs/Model/MessagingIncomingEventClientDataPageType.md)
- - [MessagingIncomingEventClientDataUtmType](docs/Model/MessagingIncomingEventClientDataUtmType.md)
- - [MessagingIncomingEventType](docs/Model/MessagingIncomingEventType.md)
- - [MessagingIncomingEventTypeClientData](docs/Model/MessagingIncomingEventTypeClientData.md)
- - [MessagingIncomingEventTypeEventData](docs/Model/MessagingIncomingEventTypeEventData.md)
- - [MessagingLoginResponseType](docs/Model/MessagingLoginResponseType.md)
- - [MessagingLoginResponseTypeResult](docs/Model/MessagingLoginResponseTypeResult.md)
- - [MessagingOutgoingChatCloseEventSenderDataType](docs/Model/MessagingOutgoingChatCloseEventSenderDataType.md)
- - [MessagingOutgoingChatCloseEventType](docs/Model/MessagingOutgoingChatCloseEventType.md)
- - [MessagingOutgoingChatCloseEventTypeEventData](docs/Model/MessagingOutgoingChatCloseEventTypeEventData.md)
- - [MessagingOutgoingNewMessageEventType](docs/Model/MessagingOutgoingNewMessageEventType.md)
- - [MessagingOutgoingNewMessageEventTypeClientData](docs/Model/MessagingOutgoingNewMessageEventTypeClientData.md)
- - [MessagingOutgoingNewMessageEventTypeEventData](docs/Model/MessagingOutgoingNewMessageEventTypeEventData.md)
  - [Meta](docs/Model/Meta.md)
  - [PauseCampaignResponseType](docs/Model/PauseCampaignResponseType.md)
  - [PhoneNumberCampaignType](docs/Model/PhoneNumberCampaignType.md)
@@ -214,10 +188,6 @@ Class | Method | HTTP request | Description
 - **Type**: API key
 - **API key parameter name**: domain
 - **Location**: URL query string
-
-## jwt_token
-- **Location**: HTTP header
-- **Header key parameter name**: Authorization
 
 
 ## Author

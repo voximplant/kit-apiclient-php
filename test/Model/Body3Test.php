@@ -77,9 +77,9 @@ class Body3Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "refresh_token"
+     * Test attribute "report_id"
      */
-    public function testPropertyRefreshToken()
+    public function testPropertyReportId()
     {
     }
 }
