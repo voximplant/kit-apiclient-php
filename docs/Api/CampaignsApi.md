@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 
 
-Get the download link to the stats file (.XSLS).
+Download report file (.xlsx or .csv).
 
 ### Example
 ```php

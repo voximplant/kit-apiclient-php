@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Get the download link to the report file (.xsls).
+Download report file (.xlsx or .csv).
 
 ### Example
 ```php

@@ -62,7 +62,8 @@ class Body2 implements ModelInterface, ArrayAccess
         'call_direction' => 'string',
         'scenario_ids' => 'string',
         'campaign_ids' => 'string',
-        'phone' => 'string'
+        'phone' => 'string',
+        'format' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class Body2 implements ModelInterface, ArrayAccess
         'call_direction' => null,
         'scenario_ids' => null,
         'campaign_ids' => null,
-        'phone' => null
+        'phone' => null,
+        'format' => null
     ];
 
     /**
@@ -111,7 +113,8 @@ class Body2 implements ModelInterface, ArrayAccess
         'call_direction' => 'call_direction',
         'scenario_ids' => 'scenario_ids',
         'campaign_ids' => 'campaign_ids',
-        'phone' => 'phone'
+        'phone' => 'phone',
+        'format' => 'format'
     ];
 
     /**
@@ -125,7 +128,8 @@ class Body2 implements ModelInterface, ArrayAccess
         'call_direction' => 'setCallDirection',
         'scenario_ids' => 'setScenarioIds',
         'campaign_ids' => 'setCampaignIds',
-        'phone' => 'setPhone'
+        'phone' => 'setPhone',
+        'format' => 'setFormat'
     ];
 
     /**
@@ -139,7 +143,8 @@ class Body2 implements ModelInterface, ArrayAccess
         'call_direction' => 'getCallDirection',
         'scenario_ids' => 'getScenarioIds',
         'campaign_ids' => 'getCampaignIds',
-        'phone' => 'getPhone'
+        'phone' => 'getPhone',
+        'format' => 'getFormat'
     ];
 
     /**
@@ -208,6 +213,7 @@ class Body2 implements ModelInterface, ArrayAccess
         $this->container['scenario_ids'] = isset($data['scenario_ids']) ? $data['scenario_ids'] : null;
         $this->container['campaign_ids'] = isset($data['campaign_ids']) ? $data['campaign_ids'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['format'] = isset($data['format']) ? $data['format'] : null;
     }
 
     /**
@@ -374,6 +380,30 @@ class Body2 implements ModelInterface, ArrayAccess
     public function setPhone($phone)
     {
         $this->container['phone'] = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Gets format
+     *
+     * @return string
+     */
+    public function getFormat()
+    {
+        return $this->container['format'];
+    }
+
+    /**
+     * Sets format
+     *
+     * @param string $format Report format. The following values are possible: csv, xlsx
+     *
+     * @return $this
+     */
+    public function setFormat($format)
+    {
+        $this->container['format'] = $format;
 
         return $this;
     }

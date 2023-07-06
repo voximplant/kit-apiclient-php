@@ -64,14 +64,15 @@ class HistoryApi
      * @param  string $scenario_ids scenario_ids (optional)
      * @param  string $campaign_ids campaign_ids (optional)
      * @param  string $phone phone (optional)
+     * @param  string $format format (optional)
      *
      * @throws \VoximplantKit\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \VoximplantKit\Model\ExportHistoryReportResponseType
      */
-    public function exportCallsHistoryReport($datetime_start = null, $datetime_end = null, $call_direction = null, $scenario_ids = null, $campaign_ids = null, $phone = null)
+    public function exportCallsHistoryReport($datetime_start = null, $datetime_end = null, $call_direction = null, $scenario_ids = null, $campaign_ids = null, $phone = null, $format = null)
     {
-        $request = $this->exportCallsHistoryReportRequest($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone);
+        $request = $this->exportCallsHistoryReportRequest($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone, $format);
         list($response) = $this->client->sync($request);
         return $response;
     }
@@ -87,13 +88,14 @@ class HistoryApi
      * @param  string $scenario_ids (optional)
      * @param  string $campaign_ids (optional)
      * @param  string $phone (optional)
+     * @param  string $format (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function exportCallsHistoryReportAsync($datetime_start = null, $datetime_end = null, $call_direction = null, $scenario_ids = null, $campaign_ids = null, $phone = null)
+    public function exportCallsHistoryReportAsync($datetime_start = null, $datetime_end = null, $call_direction = null, $scenario_ids = null, $campaign_ids = null, $phone = null, $format = null)
     {
-        $request = $this->exportCallsHistoryReportRequest($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone);
+        $request = $this->exportCallsHistoryReportRequest($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone, $format);
         return $this->client->async($request)->then(
                function ($response) {
                	return $response[0];
@@ -110,11 +112,12 @@ class HistoryApi
      * @param  string $scenario_ids (optional)
      * @param  string $campaign_ids (optional)
      * @param  string $phone (optional)
+     * @param  string $format (optional)
      *
      * @throws \InvalidArgumentException
      * @return VoximplantKitRequest
      */
-    protected function exportCallsHistoryReportRequest($datetime_start = null, $datetime_end = null, $call_direction = null, $scenario_ids = null, $campaign_ids = null, $phone = null)
+    protected function exportCallsHistoryReportRequest($datetime_start = null, $datetime_end = null, $call_direction = null, $scenario_ids = null, $campaign_ids = null, $phone = null, $format = null)
     {
 
         $resourcePath = '/history/exportCallsHistoryReport';
@@ -149,6 +152,10 @@ class HistoryApi
         // form params
         if ($phone !== null) {
             $formParams['phone'] = ObjectSerializer::toFormValue($phone);
+        }
+        // form params
+        if ($format !== null) {
+            $formParams['format'] = ObjectSerializer::toFormValue($format);
         }
         // body params
         $_tempBody = null;

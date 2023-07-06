@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **exportCallsHistoryReport**
-> \VoximplantKit\Model\ExportHistoryReportResponseType exportCallsHistoryReport($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone)
+> \VoximplantKit\Model\ExportHistoryReportResponseType exportCallsHistoryReport($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone, $format)
 
 
 
@@ -40,9 +40,10 @@ $call_direction = "call_direction_example"; // string |
 $scenario_ids = "scenario_ids_example"; // string | 
 $campaign_ids = "campaign_ids_example"; // string | 
 $phone = "phone_example"; // string | 
+$format = "format_example"; // string | 
 
 try {
-    $result = $kitApi->HistoryApi->exportCallsHistoryReport($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone);
+    $result = $kitApi->HistoryApi->exportCallsHistoryReport($datetime_start, $datetime_end, $call_direction, $scenario_ids, $campaign_ids, $phone, $format);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling $kitApi->HistoryApi->exportCallsHistoryReport: ', $e->getMessage(), PHP_EOL;
@@ -60,6 +61,7 @@ Name | Type | Description  | Notes
  **scenario_ids** | **string**|  | [optional]
  **campaign_ids** | **string**|  | [optional]
  **phone** | **string**|  | [optional]
+ **format** | **string**|  | [optional]
 
 ### Return type
 

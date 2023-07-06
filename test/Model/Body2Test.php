@@ -117,4 +117,11 @@ class Body2Test extends \PHPUnit_Framework_TestCase
     public function testPropertyPhone()
     {
     }
+
+    /**
+     * Test attribute "format"
+     */
+    public function testPropertyFormat()
+    {
+    }
 }

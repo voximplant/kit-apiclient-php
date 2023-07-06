@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **scenario_ids** | **string** | Json integer array with scenarios IDs. The ID can be retrieved via the **searchScenarios** method. (&lt;b&gt;example:&lt;/b&gt; scenario_ids&#x3D;[1,2,3,...,9]) | [optional] 
 **campaign_ids** | **string** | Json integer array with campaign IDs. The ID can be retrieved via the **searchCampaigns** method. (&lt;b&gt;example:&lt;/b&gt; campaign_ids&#x3D;[1,2,3,...,9]) | [optional] 
 **phone** | **string** | Phone number to filter. The response will include calls to the specified number only. The minimum number of digits is 3. (&lt;b&gt;example:&lt;/b&gt; phone&#x3D;15417543010) | [optional] 
+**format** | **string** | Report format. The following values are possible: csv, xlsx | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
